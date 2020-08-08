@@ -1,0 +1,205 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", "https://fonts.google.com/specimen/Montserrat";
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* main container */
+.main-container {
+  background: url("images/bg-top.svg");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-clip: content-box;
+  background-position-x: left;
+}
+
+.annual-month {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+input {
+  -webkit-appearance: none;
+  outline: none;
+  background: linear-gradient(60deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  width: 70px;
+  height: 40px;
+  border-radius: 50px;
+  position: relative;
+  top: 10px;
+}
+input:before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  border-radius: 50%;
+  /* margin: 10px; */
+}
+input:checked:before {
+  transform: translate(100%);
+  transition-delay: 8ms;
+  transition-timing-function: cubic-bezier(0.72, 0.08, 0.21, 1.24);
+}
+
+h3 {
+  font-family: sans-serif;
+  font-weight: 50px;
+  font-size: 36px;
+  margin: 1em 0 0.5em 0;
+  text-align: center;
+}
+div label {
+  color: hsl(232, 13%, 33%);
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Plan divs */
+
+.basic-plan {
+  background-color: #ffffff;
+  width: 300px;
+  height: 400px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 1px 1px 5px #b3b0b0;
+  margin-top: 30px;
+}
+
+h4 {
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 20px;
+  color: hsl(232, 13%, 33%);
+}
+.plan-price {
+  color: hsl(232, 13%, 33%);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 50px;
+  font-weight: bolder;
+  border-bottom: 2px solid hsl(234, 14%, 74%);
+  width: 90%;
+  margin: auto;
+  margin-top: 30px;
+}
+p > span {
+  font-size: 25px;
+  font-weight: bolder;
+  position: relative;
+  bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  color: hsl(233, 13%, 49%);
+  border-bottom: 2px solid hsl(234, 14%, 74%);
+  padding: 20px 0 20px 0;
+  width: 90%;
+  margin: auto;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+}
+
+.btn {
+  width: 80%;
+  height: 40px;
+  margin-top: 30px;
+  background: linear-gradient(60deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
+}
+
+.professional-plan {
+  background: linear-gradient(60deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  width: 300px;
+  height: 400px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 1px 1px 5px #b3b0b0;
+  margin-top: 30px;
+}
+
+.professional-plan > button {
+  background: #fff;
+  color: hsl(237, 63%, 64%);
+}
+
+.professional-plan > ul li,
+.professional-plan > .plan-price,
+.professional-plan > h4 {
+  color: #fff;
+  border-color: rgb(224, 221, 221);
+}
+
+.master-plan {
+  background: #fff;
+  width: 300px;
+  height: 400px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 1px 1px 5px #b3b0b0;
+  margin-top: 30px;
+}
+
+* {
+  font-family: "Montserrat", "https://fonts.google.com/specimen/Montserrat";
+}
+
+@media screen and (min-width: 375px) {
+  .monthly-pricing,
+  .annually-pricing {
+    display: grid;
+    grid-template-areas: "b p m";
+  }
+
+  .basic-plan {
+    grid-area: b;
+    /* height: 350px; */
+  }
+  .professional-plan {
+    grid-area: p;
+    height: 450px;
+    position: relative;
+    bottom: 5%;
+    padding-top: 20px;
+  }
+  .master-plan {
+    grid-area: m;
+    /* height: 400px; */
+  }
+  .main-container {
+    background: url("images/bg-bottom.svg");
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+}
+.annually-pricing {
+  display: none;
+}
