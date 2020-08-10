@@ -1,0 +1,324 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif, "https://fonts.google.com/specimen/Inter";
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+body {
+  width: 100vw;
+  scroll-behavior: hidden;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+main {
+  padding: 30px 10px 0 10px;
+}
+
+.header {
+  margin: 0 0 20px 0;
+}
+.header > h3 {
+  font-size: 20px;
+  padding-bottom: 5px;
+  color: hsl(230, 17%, 14%);
+}
+
+.header > p {
+  padding-bottom: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  color: hsl(228, 12%, 44%);
+}
+
+hr {
+  background: hsl(228, 12%, 44%);
+  color: hsl(228, 12%, 44%);
+  width: 250px;
+}
+
+.mode-control {
+  width: 250px;
+  padding: 0 0 40px 0;
+}
+[for="mode"] {
+  color: hsl(228, 12%, 44%);
+  padding-right: 100px;
+}
+
+#mode {
+  /* padding-left: 50px; */
+  outline: none;
+  -webkit-appearance: none;
+  height: 30px;
+  width: 60px;
+  background: hsl(230, 22%, 74%);
+  border-radius: 50px;
+  position: relative;
+  top: 5px;
+}
+#mode:before {
+  content: "";
+  background-color: #fff;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50px;
+  margin: 2.5px 0 0 4px;
+  /* position: relative; */
+}
+
+#mode:checked:before {
+  transform: translate(100%);
+  background: hsl(230, 17%, 14%);
+}
+
+.faceook,
+.twitter,
+.instagram,
+.youtube {
+  width: 250px;
+  height: 180px;
+  background: hsl(225, 100%, 98%);
+  border-radius: 5px;
+  border-top: 3px solid hsl(214, 67%, 54%);
+  text-align: center;
+  padding-top: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.faceook > span,
+.twitter span,
+.instagram span,
+.youtube span {
+  font-size: 12px;
+  color: hsl(228, 12%, 44%);
+  margin: 0 0 20px 0;
+}
+
+.faceook span > img,
+.twitter span > img,
+.instagram span > img,
+.youtube span > img {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 5px;
+}
+
+.followers {
+  font-size: 40px;
+  margin-top: 20px;
+  font-weight: bolder;
+}
+
+.follower-content {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: hsl(228, 12%, 44%);
+  margin-bottom: 20px;
+}
+
+.date {
+  font-size: 12px;
+  color: #23af6e;
+}
+
+.date > img {
+  margin-right: 2px;
+}
+
+.instagram {
+  border-color: rgb(119, 42, 81);
+}
+.youtube {
+  border-color: rgb(163, 21, 21);
+}
+
+h4 {
+  font-size: 20px;
+  color: hsl(228, 12%, 44%);
+  margin-bottom: 10px;
+}
+.fb-overview,
+.fb-likes,
+.twitter-view,
+.instagram-view,
+.youtube-view {
+  width: 250px;
+  height: 100px;
+  background: hsl(225, 100%, 98%);
+  margin-bottom: 15px;
+  padding: 20px 0 0 10px;
+  cursor: pointer;
+}
+
+.fb-overview span > img,
+.twitter-view span > img,
+.instagram-view span > img,
+.youtube-view span > img {
+  position: relative;
+  left: 40%;
+  top: 5px;
+}
+
+.fb-overview span,
+.twitter-view span,
+.instagram-view span,
+.youtube-view span {
+  color: hsl(228, 12%, 44%);
+  font-size: 15px;
+}
+.view {
+  font-size: 30px;
+  font-weight: bolder;
+  margin-top: 20px;
+}
+.rate {
+  /* display: inline; */
+  color: #23af6e;
+  position: relative;
+  left: 70%;
+  bottom: 30%;
+  font-size: 12px;
+}
+
+.fb-likes span > img {
+  position: relative;
+  left: 63%;
+}
+
+.first span > img {
+  position: relative;
+  left: 50%;
+}
+
+.second span > img {
+  position: relative;
+  left: 45%;
+}
+
+.second [class="rate"],
+.third [class="rate"] {
+  color: red;
+}
+
+/* Dark MODE  */
+
+.container.dark-theme {
+  background: hsl(230, 17%, 14%);
+  color: #fff;
+}
+
+.header > h3.dark-theme,
+h4.dark-theme {
+  color: #fff;
+}
+.faceook.dark-theme,
+.twitter.dark-theme,
+.instagram.dark-theme,
+.youtube.dark-theme {
+  background: hsl(228, 28%, 20%);
+}
+.followers.dark-theme {
+  color: #fff;
+}
+
+#mode.dark-theme {
+  background: linear-gradient(60deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+[for="mode"].dark-theme {
+  color: #fff;
+}
+
+.fb-overview.dark-theme,
+.fb-likes.dark-theme,
+.twitter-view.dark-theme,
+.instagram-view.dark-theme,
+.youtube-view.dark-theme {
+  background: hsl(228, 28%, 20%);
+}
+
+/* Mobile  */
+@media screen and (min-width: 768px) {
+  .top-card {
+    display: grid;
+    grid-template-areas: "f t i y";
+  }
+
+  .faceook {
+    grid-area: f;
+    margin-right: 20px;
+  }
+  .twitter {
+    grid-area: t;
+    margin-right: 20px;
+  }
+  .instagram {
+    grid-area: i;
+    margin-right: 20px;
+  }
+  .youtube {
+    grid-area: y;
+    margin-right: 20px;
+  }
+
+  .bottom-card1 {
+    display: grid;
+    grid-template-areas: "fbo fbl ivw ivi";
+  }
+  .fb-overview {
+    grid-area: fbo;
+    margin-right: 20px;
+  }
+  .fb-likes {
+    grid-area: fbl;
+    margin-right: 20px;
+  }
+  .instagram-view {
+    grid-area: ivw;
+    margin-right: 20px;
+  }
+  .iView {
+    grid-area: ivi;
+    margin-right: 20px;
+  }
+  .bottom-card2 {
+    display: grid;
+    grid-template-areas: "twf ttv fyw ytv";
+  }
+  .first {
+    grid-area: twf;
+  }
+  .twitter2 {
+    grid-area: ttv;
+  }
+  .youtube-third {
+    grid-area: fyw;
+  }
+  .second {
+    grid-area: ytv;
+  }
+  hr {
+    display: none;
+  }
+  .mode-control {
+    position: relative;
+    left: 75%;
+    bottom: 50px;
+  }
+}
