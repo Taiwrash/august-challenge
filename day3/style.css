@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif, "Rubik", "(https://fonts.google.com/specimen/Rubik)";
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+.container {
+  width: 100%;
+  height: 100vh;
+}
+
+.sub-container {
+  background: hsl(264, 100%, 61%);
+  width: 50%;
+  height: 80%;
+  margin: 0;
+  border-radius: 0 0 100% 0;
+}
+.sub-container > .white-mobile {
+  width: 300px;
+  height: 580px;
+  position: relative;
+  background: #fff;
+  top: 20%;
+  left: 30%;
+  border-radius: 15px;
+  box-shadow: 0 10px 10px #a8a7a7;
+}
+.sub-mobile {
+  background: hsl(270, 20%, 96%);
+  border-radius: 15px;
+  width: 270px;
+  height: 550px;
+  position: absolute;
+  top: 3%;
+  left: 5%;
+}
+
+.mobile-head {
+  width: 270px;
+  height: 80px;
+  background: linear-gradient(25deg, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+  border-radius: 15px 15px 5px 5px;
+}
+
+.head-pin {
+  background: #fff;
+  width: 150px;
+  height: 30px;
+  border-radius: 50px;
+  position: absolute;
+  top: -10px;
+  left: 20%;
+}
+
+.avatar-area {
+  width: 200px;
+  height: 80px;
+  position: relative;
+  top: 45px;
+}
+.avatar > img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 3px solid #e4e0e0;
+  position: relative;
+  left: 30px;
+  top: -10px;
+}
+.name-sub {
+  position: relative;
+  left: 35%;
+  top: -45px;
+}
+
+.name-sub > .name {
+  font-size: 15px;
+  color: #e4e0e0;
+  font-weight: bold;
+}
+
+.name-sub > .sub {
+  color: #e4e0e0;
+  font-size: 10px;
+}
+
+.message {
+  width: 150px;
+  height: 40px;
+  color: hsl(276, 47%, 65%);
+  background: hsl(0, 0%, 92%);
+  margin: 5px 0 10px 5px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 10px;
+}
+
+.client-message span > img {
+  width: 40px;
+  height: 40px;
+  margin-left: 5px;
+  border-radius: 10px;
+  position: relative;
+  left: 43%;
+}
+
+.text-message {
+  width: 140px;
+  background: hsl(0, 0%, 100%);
+  margin: 5px 0 10px 5px;
+  height: 40px;
+  padding: 10px;
+  font-size: 10px;
+  border-radius: 10px;
+  position: relative;
+  left: 43%;
+}
+
+.second-class {
+  width: 100px;
+  height: 30px;
+  position: relative;
+  left: 150px;
+}
+.bottom > .message {
+  width: 190px;
+  height: 60px;
+  font-size: 10px;
+}
+
+.prices {
+  background: linear-gradient(25deg, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+  width: 220px;
+  height: 35px;
+  margin-bottom: 10px;
+  border-radius: 10px 10px 10px 0;
+  padding-top: 10px;
+  padding-left: 10px;
+  margin-left: 10px;
+}
+[type="checkbox"] {
+  -webkit-appearance: none;
+  outline: none;
+  width: 15px;
+  height: 15px;
+  border: 2px solid hsl(289, 100%, 72%);
+  border-radius: 50%;
+}
+
+label {
+  margin-left: 10px;
+  color: hsl(289, 76%, 83%);
+  font-size: 15px;
+  position: relative;
+  bottom: 3px;
+}
+
+.prices span {
+  color: #fff;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+.exact-price1 {
+  position: relative;
+  left: 14%;
+}
+
+[type="text"] {
+  width: 250px;
+  height: 40px;
+  border: none;
+  background: #fff;
+  border-radius: 50px;
+  margin-left: 10px;
+  padding: 20px;
+  font-size: 10px;
+  padding-left: 30px;
+}
+
+.btn {
+  width: 40px;
+  height: 40px;
+  outline: none;
+  border: none;
+  background: hsl(271, 36%, 24%);
+  color: #fff;
+  font-weight: bolder;
+  font-size: 30px;
+  border-radius: 50%;
+  position: relative;
+  left: 80%;
+  bottom: 40px;
+}
+
+.content-area {
+  position: relative;
+  top: 40%;
+  width: 350px;
+  text-align: center;
+  margin-left: 50px;
+}
+h3 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: hsl(271, 36%, 24%);
+}
+
+.contents {
+  font-size: 16px;
+  line-height: 30px;
+  color: #a3a8a3;
+}
+
+.attribution {
+  position: relative;
+  top: 70%;
+}
+
+@media screen and (min-width: 768px) {
+  .sub-container {
+    display: grid;
+    grid-template-areas: "w w c c";
+    height: 700px;
+    width: 400px;
+  }
+
+  .white-mobile {
+    grid-area: w;
+    margin-left: 50px;
+  }
+
+  .content-area {
+    grid-area: c;
+    position: relative;
+    left: 50%;
+    width: 500px;
+    text-align: left;
+  }
+  .content-area > p {
+    font-size: 20px;
+  }
+  .attribution {
+    position: relative;
+    top: 20%;
+  }
+}
