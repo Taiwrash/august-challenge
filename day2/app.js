@@ -2,12 +2,12 @@ const slider = document.getElementById("mode");
 let content = document.querySelectorAll("div");
 let header = document.querySelector("h3");
 let header1 = document.querySelector("h4");
-let body = document.querySelector("body");
+// let body = document.querySelector("body");
 
 slider.addEventListener("change", () => {
   slider.checked
     ?
-        body.classList.add("dark-theme");
+        //body.classList.add("dark-theme");
         content.forEach((contents) => {
         contents.classList.add("dark-theme");
         header.classList.add("dark-theme");
@@ -15,7 +15,7 @@ slider.addEventListener("change", () => {
         slider.classList.add("dark-theme");
       })
     : 
-         body.classList.remove("dark-theme");
+       //  body.classList.remove("dark-theme");
         content.forEach((contents) => {
         contents.classList.remove("dark-theme");
         header.classList.remove("dark-theme");
