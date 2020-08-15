@@ -324,7 +324,7 @@ button:hover {
     width: 100px;
     position: relative;
     bottom: 40px;
-    left: 60%;
+    left: 45%;
   }
 
   #hamburger {
@@ -408,6 +408,7 @@ button:hover {
   .research-container {
     display: grid;
     grid-template-areas: "r1 r2 r3";
+    min-width:1100px;
   }
   .r1 {
     grid-area: r1;
