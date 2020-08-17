@@ -1,6 +1,6 @@
 * {
   padding: 0;
-  margin-top: 0;
+  margin: 0;
   box-sizing: border-box;
   font-family: sans-serif, "Poppins",
     "https://fonts.google.com/specimen/Poppins";
@@ -11,9 +11,12 @@ main {
 }
 
 header {
-  height: 100%;
-  background: #fff;
+  z-index: 9000;
+  width: 100%;
+  height: 70px;
+  background: #ffffff;
   padding-top: 20px;
+  position: fixed;
 }
 
 .logo {
@@ -23,11 +26,14 @@ header {
 .logo span {
   margin-left: 70%;
   color: hsl(0, 0%, 75%);
+  font-size: 40px;
+  position: relative;
+  bottom: 20px;
 }
 
 .logo img {
-  width: 50px;
-  height: 15px;
+  width: 70px;
+  height: 20px;
   margin-left: 20px;
 }
 
@@ -39,12 +45,15 @@ nav {
   margin: auto;
   display: none;
   margin-top: 20px;
+  padding-bottom: 300px;
+  padding-top: 50px;
+  font-size: 20px;
 }
 
 nav ul li {
   list-style: none;
   text-align: center;
-  padding: 10px;
+  padding: 15px;
 }
 nav ul li a {
   text-decoration: none;
@@ -52,7 +61,7 @@ nav ul li a {
 }
 hr {
   width: 80%;
-  /* margin: 0; */
+  margin-left: 10%;
   padding: 0;
   text-align: center;
 }
@@ -62,47 +71,56 @@ nav ul li button {
   color: hsl(0, 0%, 100%);
   border: none;
   outline: none;
+  font-size: 20px;
 }
 
 nav ul li .signup {
   background-color: hsl(180, 66%, 49%);
   width: 90%;
-  height: 20px;
+  height: 40px;
   color: #fff;
   border: none;
   outline: none;
+  font-size: 25px;
   border-radius: 50px;
 }
 .sub-header-img {
   width: 100%;
-  height: 300px;
+  height: 350px;
   background: url("images/illustration-working.svg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: left;
+  /* background-position: left; */
+  margin-top: 30%;
 }
 
 .sub-header-content {
   width: 100%;
   text-align: center;
-  margin-top: 20px;
-  margin-left: 5%;
+  margin-top: 30px;
+  /* margin-left: 5%; */
 }
 
+.sub-header-content h3 {
+  font-size: 2.6em;
+}
 .sub-header-content p {
-  width: 50%;
-  font-size: 10px;
-  margin-top: -10px;
+  width: 100%;
+  font-size: 20px;
+  padding: 20px 4px 0 4px;
   color: hsl(0, 0%, 47%);
   margin: auto;
+  line-height: 25px;
 }
 
 .sub-header-content button,
 .boost button {
   color: hsl(0, 0%, 100%);
   background: hsl(180, 66%, 49%);
-  width: 100px;
-  height: 25px;
+  width: 200px;
+  height: 60px;
+  font-size: 30px;
+  font-weight: bold;
   border-radius: 50px;
   border: none;
   outline: none;
@@ -121,7 +139,6 @@ nav ul li .signup {
   position: relative;
   top: 50px;
   background-color: hsl(255, 11%, 22%);
-  margin-left: 10px;
   margin: auto;
 }
 
@@ -133,6 +150,8 @@ nav ul li .signup {
   border-radius: 5px;
   border: none;
   height: 50px;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .btn-short {
@@ -145,7 +164,7 @@ nav ul li .signup {
   background: hsl(240, 4%, 90%);
   padding: 20% 10px 10px 10px;
   width: 100%;
-  height: 1200px;
+  height: 1250px;
 }
 
 .about article {
@@ -153,18 +172,23 @@ nav ul li .signup {
 }
 
 .article1 {
-  width: 200px;
-  margin: auto;
+  width: 100%;
+  margin-top: 60px;
 }
 
+.about article h4 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
 .about article p {
-  font-size: 16px;
+  font-size: 18px;
   color: hsl(0, 0%, 47%);
+  line-height: 25px;
 }
 
 .icon {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   background: hsl(255, 11%, 22%);
   border-radius: 50%;
   margin: auto;
@@ -176,12 +200,16 @@ nav ul li .signup {
 }
 
 .brand {
-  width: 250px;
+  width: 90%;
   height: 250px;
   background: hsl(0, 0%, 100%);
   border-radius: 5px;
   padding: 20% 10px 10px 10px;
   margin: auto;
+}
+
+.about article.brand h4 {
+  font-size: 22px;
 }
 
 .brand > p {
@@ -195,7 +223,7 @@ nav ul li .signup {
   background-color: hsl(180, 66%, 49%);
   content: "";
   position: absolute;
-  margin-left: 45%;
+  margin-left: 47%;
 }
 
 .research:last-child::after {
@@ -258,7 +286,7 @@ footer {
   height: 100px;
   width: 80%;
   position: relative;
-  bottom: 20%;
+
   left: 10%;
   display: none;
 }
@@ -274,11 +302,8 @@ footer {
 }
 
 .getArea button {
-  width: 15%;
-  height: 30%;
-  position: relative;
-  left: 64.5%;
-  bottom: 45%;
+  width: 80%;
+  height: 40%;
 }
 
 button:hover {
@@ -293,8 +318,23 @@ button:hover {
   padding: 20px;
 }
 
+@media screen and (min-width: 768px) {
+  .sub-header-img {
+    height: 500px;
+  }
+  .about {
+    height: 1500px;
+  }
+  .research::after {
+    margin-left: 48%;
+  }
+  .footer-logo {
+    padding-top: 100px;
+  }
+}
+
 /* Desktop Section  */
-@media screen and (min-width: 605px) {
+@media screen and (min-width: 769px) {
   nav {
     display: block;
     background: none;
@@ -308,7 +348,8 @@ button:hover {
     display: inline;
     font-weight: bold;
     position: relative;
-    bottom: 40px;
+    bottom: 110px;
+    left: 10%;
   }
 
   hr {
@@ -321,14 +362,19 @@ button:hover {
   nav ul li button,
   nav ul li .signup {
     display: inline-block;
-    width: 100px;
+    width: 150px;
     position: relative;
-    bottom: 40px;
-    left: 45%;
+    bottom: 100px;
+    left: 40%;
   }
 
   #hamburger {
     display: none;
+  }
+  .logo img {
+    width: 100px;
+    height: 30px;
+    margin-left: 10%;
   }
 
   header {
@@ -337,12 +383,15 @@ button:hover {
   .sub-header {
     display: grid;
     grid-template-areas: "c c i i";
-    grid-row-gap: 0;
+    /* grid-row-gap: 0; */
   }
 
   .sub-header-img {
-    width: 100%;
+    width: 300%;
     grid-area: i;
+    position: relative;
+    right: 150%;
+    /* top: 10%; */
   }
 
   .sub-header-content {
@@ -351,12 +400,12 @@ button:hover {
     margin: 0;
     /* padding-left: 80px; */
     position: relative;
-    left: 30%;
+    left: 10%;
     top: 20%;
   }
 
   .sub-header-content p {
-    width: 30%;
+    width: 40%;
     bottom: 20px;
     text-align: left;
     margin: 0;
@@ -367,13 +416,14 @@ button:hover {
 
   .sub-header-content h3 {
     font-size: 36px;
-    width: 40%;
+    width: 30%;
     text-align: left;
+    margin-bottom: 20px;
   }
 
   .sub-header-content button {
     position: relative;
-    right: 45%;
+    right: 41%;
   }
 
   .short-area {
@@ -395,25 +445,28 @@ button:hover {
   }
 
   .article1 {
-    width: 30%;
+    width: 100%;
     font-size: 36px;
     margin-top: -40px;
   }
 
-  .article1 p,
-  .article1 h3 {
-    margin-top: -20px;
+  .article1 p {
+    margin-top: -10px;
+    width: 30%;
+    margin-left: 35%;
+    margin-bottom: 5%;
   }
 
   .research-container {
     display: grid;
     grid-template-areas: "r1 r2 r3";
-    min-width:1100px;
+    min-width: 1100px;
   }
   .r1 {
     grid-area: r1;
     position: relative;
-    left: 20%;
+    left: 10%;
+    margin: 0 10px 0 10px;
   }
 
   .r2 {
@@ -426,21 +479,29 @@ button:hover {
     grid-area: r3;
     position: relative;
     top: 40%;
-    right: 20%;
+    right: 10%;
+  }
+
+  .brand {
+    width: 80%;
   }
 
   .research::after {
     height: 8px;
     width: 500px;
     bottom: 70px;
-    left: 147px;
+    left: 186px;
   }
   .research:nth-child(2)::after {
     display: none;
   }
 
+  .icon {
+    margin: 0;
+    margin-left: 20%;
+  }
   .about {
-    height: 900px;
+    height: 950px;
   }
 
   .boost {
@@ -471,6 +532,7 @@ button:hover {
 
   .footer-logo {
     grid-area: fl;
+    padding: 0;
   }
   .f1 {
     grid-area: f1;
@@ -490,5 +552,18 @@ button:hover {
   }
   .fetures ul li {
     font-size: 12px;
+  }
+  .getArea {
+    position: relative;
+    bottom: 20%;
+    left: 10%;
+  }
+
+  .getArea button {
+    width: 15%;
+    height: 30%;
+    position: relative;
+    left: 64.5%;
+    bottom: 45%;
   }
 }
