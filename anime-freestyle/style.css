@@ -1,0 +1,91 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  margin-top: 100px;
+  width: 100vw;
+}
+
+.biggest-circle {
+  width: 60%;
+  height: 240px;
+  background: linear-gradient(rgb(124, 50, 243), rgb(60, 31, 105));
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.medium-circle {
+  width: 70%;
+  height: 180px;
+  background: linear-gradient(rgb(255, 150, 231), rgb(124, 50, 243));
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.small-circle {
+  width: 60%;
+  height: 100px;
+  background: #e1e4e1;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 3px 3px 10px #5c5858;
+}
+
+h3 {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.8em;
+  background: linear-gradient(90deg, rgb(255, 150, 231), rgb(124, 50, 243));
+  color: #ffffff;
+  display: none;
+}
+
+.animationBig {
+  animation: rotate 5s 1s 3 cubic-bezier(0.6, -0.28, 0.735, 0.045) backwards;
+}
+
+.animationSmall {
+  animation: scale 10s 3s 5 cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards;
+}
+
+span {
+  font-size: 0.8em;
+  font-family: monospace;
+  color: rgb(124, 50, 243);
+}
+@keyframes scale {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(0.15);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
