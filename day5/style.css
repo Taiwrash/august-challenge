@@ -24,11 +24,10 @@ header {
 }
 
 .logo span {
-  margin-left: 70%;
+  margin-left: 60%;
   color: hsl(0, 0%, 75%);
   font-size: 40px;
-  position: relative;
-  bottom: 20px;
+  position:relative;
 }
 
 .logo img {
